@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class email extends AppCompatActivity {
+public class email extends journalActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
