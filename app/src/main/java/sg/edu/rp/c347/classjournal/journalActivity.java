@@ -26,9 +26,6 @@ public class journalActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.class_journal_info);
 
-        Intent i = getIntent();
-        i.getSerializableExtra("journal");
-
         lvWeek = (ListView)findViewById(R.id.listView1);
         btnInfo = (Button)findViewById(R.id.buttonInfo);
         btnInfo.setOnClickListener(new View.OnClickListener() {
@@ -42,14 +39,9 @@ public class journalActivity extends AppCompatActivity{
         });
 
         a1 = new ArrayList<>();
-        a1.add(new journal("week 1", "B"));
-        a1.add(new journal("week 2", "C"));
-        a1.add(new journal("week 3", "A"));
-
-        //set Adapter
-        aa = new JournalArrayAdapter(this, R.layout.row, a1);
-        lvWeek.setAdapter(aa);
-
+        a1.add(new journal("week 1", 'B'));
+        a1.add(new journal("week 2", 'C'));
+        a1.add(new journal("week 3", 'A'));
 
     }
 }
