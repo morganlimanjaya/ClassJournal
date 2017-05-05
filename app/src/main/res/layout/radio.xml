@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewDGTitle"
+                android:id="@+id/textViewDG"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="DG"
@@ -36,6 +36,7 @@
                 android:textSize="18sp" />
 
             <RadioGroup
+                android:id="@+id/Rg"
                 android:layout_width="match_parent"
                 android:layout_height="21dp">
 
