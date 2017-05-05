@@ -1,12 +1,10 @@
 package sg.edu.rp.c347.classjournal;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         tvClass = (TextView)findViewById(R.id.textViewClass);
 
         a1 = new ArrayList<>();
-        a1.add(new journal("week 1", 'B'));
-        a1.add(new journal("week 2", 'C'));
-        a1.add(new journal("week 3", 'A'));
+        a1.add(new journal("week 1", "B"));
+        a1.add(new journal("week 2", "C"));
+        a1.add(new journal("week 3", "A"));
 
         // Set listener to handle the clicking of Superman TextView
         tvClass.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this,
                         journalActivity.class);
 
+                i.putExtra("journal",'B');
                 // Start activity with requestCodeForSupermanStats to
                 // identify it was started by clicking on Superman
                 startActivityForResult(i, requestCode1);

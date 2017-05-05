@@ -9,11 +9,11 @@ import java.io.Serializable;
 public class journal implements Serializable {
     // Create the attributes for your class
     private String week;
-    private char dg;
+    private String dg;
 
 // Create the constructor to give your 	attributes values
 
-    public journal(String week, char dg) {
+    public journal(String week, String dg) {
         this.week = week;
         this.dg = dg;
     }
@@ -24,7 +24,7 @@ public class journal implements Serializable {
     }
 
     //generate getter
-    public char getDg() {
+    public String getDg() {
         return dg;
     }
 
@@ -33,7 +33,7 @@ public class journal implements Serializable {
         this.week = week;
     }
 
-    public void setDg(char dg) {
+    public void setDg(String dg) {
         this.dg = dg;
     }
 }
