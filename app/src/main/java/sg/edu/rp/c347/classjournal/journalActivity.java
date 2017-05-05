@@ -43,5 +43,9 @@ public class journalActivity extends AppCompatActivity{
         a1.add(new journal("week 2", "C"));
         a1.add(new journal("week 3", "A"));
 
+        aa = new JournalArrayAdapter(this, R.layout.row, a1);
+        lvWeek.setAdapter(aa);
+
+
     }
 }
