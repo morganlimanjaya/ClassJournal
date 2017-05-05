@@ -1,16 +1,19 @@
 package sg.edu.rp.c347.classjournal;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    Button btnInfo;
 
     int requestCode1 = 1;
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnInfo = (Button)findViewById(R.id.buttonInfo);
         lvWeek = (ListView)findViewById(R.id.listView1);
         tvClass = (TextView)findViewById(R.id.textViewClass);
 
@@ -48,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent rpIntent = new Intent(Intent.ACTION_VIEW);
+                //set the URL to be used
+                rpIntent.setData(Uri.parse("http://www.rp.edu.sg/Diploma_in_Mobile_Software_Development_(R47).aspx"));
+                startActivity(rpIntent);
+            }
+        });
     }
 }
