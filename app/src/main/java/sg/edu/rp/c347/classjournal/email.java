@@ -33,4 +33,4 @@ public class email extends journalActivity {
     }
 
 }
-}
+
