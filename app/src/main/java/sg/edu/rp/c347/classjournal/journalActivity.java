@@ -39,9 +39,9 @@ public class journalActivity extends AppCompatActivity{
         });
 
         a1 = new ArrayList<>();
-        a1.add(new journal("week 1", 'B'));
-        a1.add(new journal("week 2", 'C'));
-        a1.add(new journal("week 3", 'A'));
+        a1.add(new journal("week 1", "B"));
+        a1.add(new journal("week 2", "C"));
+        a1.add(new journal("week 3", "A"));
 
     }
 }
